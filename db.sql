@@ -1,0 +1,1 @@
+SELECT * FROM courses_db.coursea_data;
