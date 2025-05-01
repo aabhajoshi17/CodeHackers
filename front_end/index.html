@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Recommender</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Course Recommenderr</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Get Personalized Course Recommendations</h2>
+            <form id="courseForm">
+                <div class="input-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="completed-courses">Completed Courses</label>
+                    <input type="text" id="completed-courses" name="completed-courses" placeholder="e.g., Java, Python" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="interest">Area of Interest</label>
+                    <input type="text" id="interest" name="interest" placeholder="e.g., Data Science, Web Development" required>
+                </div>
+
+                <button type="submit" id="recommendBtn">Get Recommendations</button>
+            </form>
+
+            <div id="result" class="result">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Course Recommender | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
