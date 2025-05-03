@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" 
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.codehackers.controller.CourseController"
+      spacing="10" 
+      style="-fx-padding: 10; -fx-background-color: #f5f5f5;">
+    
+    <Label text="Course Recommender" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    
+    <GridPane hgap="10" vgap="10" style="-fx-padding: 10;">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="150"/>
+            <ColumnConstraints halignment="LEFT" minWidth="300"/>
+        </columnConstraints>
+        
+        <Label text="Your Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        
+        <Label text="Completed Courses (comma-separated):" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="completedCoursesField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        
+        <Label text="Area of Interest:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="interestField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        
+        <Button fx:id="recommendButton" text="Get Recommendations" 
+                onAction="#handleRecommend" 
+                GridPane.rowIndex="3" GridPane.columnIndex="1" 
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    </GridPane>
+    
+    <Label fx:id="statusLabel" style="-fx-text-fill: #2196F3; -fx-font-weight: bold;"/>
+    
+    <TableView fx:id="coursesTable" style="-fx-pref-height: 300px;">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Course Title" prefWidth="250"/>
+            <TableColumn fx:id="orgColumn" text="Organization" prefWidth="150"/>
+            <TableColumn fx:id="ratingColumn" text="Rating" prefWidth="80"/>
+            <TableColumn fx:id="difficultyColumn" text="Difficulty" prefWidth="100"/>
+            <TableColumn fx:id="enrolledColumn" text="Students Enrolled" prefWidth="120"/>
+        </columns>
+    </TableView>
+</VBox>

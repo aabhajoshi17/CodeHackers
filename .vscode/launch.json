@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "main.java.com.codehackers.Main",
+            "projectName": "CodeHackers_aab88fad"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "com.codehackers.Main",
+            "vmArgs": "--module-path lib/javafx --add-modules javafx.controls,javafx.fxml",
+            "classPaths": [
+                "lib/mysql-connector-j-9.3.0.jar"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
